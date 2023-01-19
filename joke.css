@@ -1,0 +1,39 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10vh);
+    background-image: url("https://wallpapercave.com/wp/wp6560290.jpg");
+    background-size: cover;
+  background-position: center;
+}
+
+.JokesPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(38, 0, 255, 0.494);
+    grid-column: 4 / 8;
+    grid-row: 3 / 6;
+    border-radius: 10px;
+}
+
+.newJokes {
+    margin: 20px;
+    grid-column: 5 / 7;
+    grid-row: 5 / 6;
+}
+#LoadingJoke {
+    display: none;
+    height: 100px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+#jokes {
+    color: white;
+}
+h1 {
+    color: white;
+    text-align: center;
+    grid-column: 5 / 7;
+}
