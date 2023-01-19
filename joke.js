@@ -56,14 +56,14 @@ function getSWData() {
 }
 jokeButton.addEventListener("click", function (event) {
     event.preventDefault();
-    //let randomGifTime = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
-    //console.log(randomGifTime)
+    var randomGifTime = Math.floor(Math.random() * (3000 - 1000 + 1) + 1000);
+    console.log(randomGifTime);
     jokesText.innerHTML = '';
-    loader.style.display = 'block'; // hör dyker min gif upp
+    loader.style.display = 'block';
     setTimeout(function () {
         getSWData().then(function (jokes) {
             jokesText.innerHTML = "".concat(jokes.setup, " <br> ").concat(jokes.punchline);
-            loader.style.display = 'none'; // här tar vi bort gif
+            loader.style.display = 'none';
         });
-    }, 500);
+    }, randomGifTime);
 });
